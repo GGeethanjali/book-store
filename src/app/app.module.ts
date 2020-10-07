@@ -8,19 +8,23 @@ import {HttpClientModule} from "@angular/common/http";
 import {GoogleBooksService} from "./services/google-books";
 import { LayoutModule } from '@angular/cdk/layout';
 import { BookItemComponent } from './pages/book-item/book-item.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import {TabMenuModule} from "primeng/tabmenu";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookItemComponent
+    BookItemComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    LayoutModule
+    LayoutModule,
+    TabMenuModule
   ],
   providers: [
     GoogleBooksService
