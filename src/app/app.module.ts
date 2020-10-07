@@ -10,9 +10,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BookItemComponent } from './pages/book-item/book-item.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import {TabMenuModule} from "primeng/tabmenu";
-import { SearchComponent } from './pages/search/search.component';
 import { HomeComponent } from './pages/home/home.component';
 import {InputTextModule} from "primeng/inputtext";
+import {OrderListModule} from "primeng/orderlist";
 
 
 @NgModule({
@@ -20,7 +20,6 @@ import {InputTextModule} from "primeng/inputtext";
     AppComponent,
     BookItemComponent,
     MenuComponent,
-    SearchComponent,
     HomeComponent
   ],
   imports: [
@@ -30,7 +29,8 @@ import {InputTextModule} from "primeng/inputtext";
     HttpClientModule,
     LayoutModule,
     TabMenuModule,
-    InputTextModule
+    InputTextModule,
+    OrderListModule
   ],
   providers: [
     GoogleBooksService

@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BookItemComponent } from './book-item.component';
+import {BookItemComponent} from './book-item.component';
+import {OrderListModule} from "primeng/orderlist";
+import {GoogleBooksService} from "../../services/google-books";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('BookItemComponent', () => {
   let component: BookItemComponent;
@@ -8,9 +11,11 @@ describe('BookItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookItemComponent ]
+      declarations: [BookItemComponent],
+      imports: [OrderListModule, HttpClientTestingModule],
+      providers: [GoogleBooksService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

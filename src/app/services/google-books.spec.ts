@@ -29,12 +29,12 @@ describe('Service: GoogleBooks', () => {
     (httpMock: HttpTestingController, service: GoogleBooksService) => {
       // We call the service
       service
-        .searchBooks(queryTitle)
+        .searchHistoryBooks()
         .subscribe((res) => {
           expect(res).toEqual(books.items);
         });
 
-      const req = httpMock.expectOne(`https://www.googleapis.com/books/v1/volumes?q=${queryTitle}`);
+      const req = httpMock.expectOne(`https://www.googleapis.com/books/v1/volumes?q=history&maxResults=10`);
       expect(req.request.method).toEqual('GET');
 
       req.flush(books);

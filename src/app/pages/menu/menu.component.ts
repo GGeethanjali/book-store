@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: [`/home`]},
-      {label: 'Browse Books', icon: 'pi pi-fw pi-search', routerLink: [`/search`]}
+      {label: 'Browse Books', icon: 'pi pi-fw pi-search', routerLink: [`/books`]}
     ];
   }
 

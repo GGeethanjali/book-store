@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {SearchComponent} from "./pages/search/search.component";
 import {HomeComponent} from "./pages/home/home.component";
+import {BookItemComponent} from "./pages/book-item/book-item.component";
 
 const routes: Routes = [
   {
-    path: 'search',
-    component: SearchComponent,
+    path: 'books',
+    component: BookItemComponent,
     pathMatch: 'prefix',
   },
   {

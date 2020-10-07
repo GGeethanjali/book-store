@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Book} from "../../models/book";
+import {GoogleBooksService} from "../../services/google-books";
 
 @Component({
   selector: 'app-book-item',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookItemComponent implements OnInit {
 
-  constructor() { }
+  books: Book[];
 
-  ngOnInit() {
+  constructor(private booksService: GoogleBooksService) {
   }
 
+  ngOnInit() {
+    this.booksService.searchHistoryBooks().subscribe(data => this.books = data);
+  }
 }

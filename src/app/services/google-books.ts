@@ -13,8 +13,8 @@ export class GoogleBooksService {
   constructor(private http: HttpClient) {
   }
 
-  searchBooks(queryTitle: string): Observable<Book[]> {
-    return this.http.get(`${this.API_PATH}?q=${queryTitle}` , {responseType: "json"})
+  searchHistoryBooks(): Observable<Book[]> {
+    return this.http.get(`${this.API_PATH}?q=history&maxResults=10` , {responseType: "json"})
       .pipe(map(response => response['items'] || []));
   }
 
