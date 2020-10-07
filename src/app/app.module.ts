@@ -12,6 +12,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 import {TabMenuModule} from "primeng/tabmenu";
 import { SearchComponent } from './pages/search/search.component';
 import { HomeComponent } from './pages/home/home.component';
+import {InputTextModule} from "primeng/inputtext";
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     HttpClientModule,
     LayoutModule,
-    TabMenuModule
+    TabMenuModule,
+    InputTextModule
   ],
   providers: [
     GoogleBooksService
