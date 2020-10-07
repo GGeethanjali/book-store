@@ -9,6 +9,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {HttpClientModule} from "@angular/common/http";
+import {GoogleBooksService} from "./services/google-books";
 
 
 @NgModule({
@@ -23,9 +25,12 @@ import {MatButtonModule} from "@angular/material/button";
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    GoogleBooksService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
