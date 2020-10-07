@@ -10,13 +10,17 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BookItemComponent } from './pages/book-item/book-item.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import {TabMenuModule} from "primeng/tabmenu";
+import { SearchComponent } from './pages/search/search.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BookItemComponent,
-    MenuComponent
+    MenuComponent,
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
